@@ -34,6 +34,13 @@ ___
 ![Oscar Bedford](photos/)
 
 - [ ] // TODO
+- [ ] Can manage details
+- [ ] Is a thinker, rather than a talker
+- [ ] Currently works in IT
+- [ ] Can explain MVC
+- [ ] Has experience with Git Branches
+- [ ] Has performed in front of a crowd
+- [ ] Taken UW-Madison CS courses outside this program
 ___
 
 ### Joshua Brischke
