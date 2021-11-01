@@ -33,7 +33,6 @@ ___
 
 ![Oscar Bedford](photos/)
 
-- [ ] // TODO
 - [ ] Can manage details
 - [ ] Is a thinker, rather than a talker
 - [ ] Currently works in IT
