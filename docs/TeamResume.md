@@ -46,5 +46,14 @@ ___
 
 ![Joshua Brischke](photos/)
 
-- [ ] // TODO
+- [ ] Is a thinker, rather than a talker
+- [ ] Is a good listener
+- [ ] Is good with numbers, stats, data
+- [ ] Can manage details
+- [ ] Thinks fast on his/her feet
+- [ ] Can handle criticism
+- [ ] Can explain MVC
+- [ ] Has experience with Git branches
+- [ ] Had done some high ed courses outside of Madison College’s program
+- [ ] Has experience in being a full stack developer for many applications.
 ___
