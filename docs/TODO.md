@@ -2,10 +2,12 @@
 ___
 
 ### Week 9
-- [ ] Create project repository and provide access for the all members
-- [ ] Complete a Team Resume
-- [ ] Complete a Team Ground Rules
-- [ ] Complete Problem Statement
+- [X] Create project repository and provide access for the all members
+- [X] Complete a Team Resume
+- [X] Complete a Team Ground Rules
+- [X] Complete Problem Statement
 
 ### Week 10
-- [ ] // Todo
+- [ ] Come up with application goal
+- [ ] DB Schema
+- [ ] Data Structure

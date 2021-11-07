@@ -21,7 +21,7 @@ infrastructure, with full CRUD functionality. Users will be able to access vario
 | Logging | Log4J2 |
 | Hosting | AWS Elastic Beanstalk |
 | Unit Testing | JUnit 5 tests to achieve 80%+ code coverage |
-| IDE | IntelliJ IDEA |
+| IDE | IntelliJ IDEA, VS Code |
 | VCS | Git |
 
 ### Design
