@@ -9,5 +9,5 @@ ___
 
 ### Week 10
 - [ ] Come up with application goal
-- [ ] DB Schema
-- [ ] Data Structure
+- [X] DB Schema
+- [X] Data Structure
