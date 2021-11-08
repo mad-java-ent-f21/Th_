@@ -4,10 +4,10 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-<!--        <property name="connection.url">jdbc:mysql://localhost:3306/{DATABASE_NAME}</property>-->
-<!--        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
-<!--        <property name="connection.username">{DATABASE_USER}</property>-->
-<!--        <property name="connection.password">{DATABASE_PASSWORD}</property>-->
+        <property name="connection.url">jdbc:mysql://aa1q78e7fjgnx5m.c589otx9gdyf.us-east-2.rds.amazonaws.com:3306/th_db</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">AWSpassword</property>
 
         <property name="hibernate.c3p0.min_size">5</property>
         <property name="hibernate.c3p0.max_size">20</property>
