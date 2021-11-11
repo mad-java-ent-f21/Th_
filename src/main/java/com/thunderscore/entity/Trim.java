@@ -11,6 +11,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Entity
+@Table(name = "trim")
 @IdClass(TrimPK.class)
 public class Trim {
 

@@ -12,6 +12,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Entity
+@Table(name = "color")
 public class Color implements Serializable {
 
     @Id

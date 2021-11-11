@@ -7,12 +7,19 @@ import java.util.Set;
 
 @ApplicationPath("/")
 
-public class CarApplication extends Application {
+public class GeneralApplication extends Application {
 
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(CarSearch.class );
+        h.add(CountryAPI.class);
+        h.add(DriveTrainAPI.class);
+        h.add(TransmissionAPI.class);
+        h.add(BrandAPI.class);
+        h.add(ModelAPI.class);
+        h.add(EngineAPI.class);
+        h.add(TrimAPI.class);
         return h;
     }
 

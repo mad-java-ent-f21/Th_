@@ -13,6 +13,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Entity
+@Table(name = "transnission")
 public class Transmission implements Serializable {
 
     @Id

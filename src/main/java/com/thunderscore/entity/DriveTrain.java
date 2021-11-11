@@ -12,6 +12,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Entity
+@Table(name = "drive_train")
 public class DriveTrain implements Serializable {
 
     @Id

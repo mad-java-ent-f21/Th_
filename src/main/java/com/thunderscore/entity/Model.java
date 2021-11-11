@@ -18,6 +18,7 @@ import java.util.Set;
 @ToString
 @RequiredArgsConstructor
 @Entity
+@Table(name = "model")
 public class Model implements Serializable {
 
     @Id
