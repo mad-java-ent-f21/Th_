@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<a href = "displayAll">Show All</a>
 </body>
 </html>
