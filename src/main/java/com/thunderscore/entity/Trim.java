@@ -12,7 +12,6 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "trim")
-@IdClass(TrimPK.class)
 public class Trim {
 
     @EmbeddedId

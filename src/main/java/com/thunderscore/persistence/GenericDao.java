@@ -51,11 +51,12 @@ public class GenericDao<T> {
 
     /**
      * Method deletes a row in database that complaint to passed entity
-     * @param entity class
+     * @param id of class
      */
-    public void delete(T entity) {
+    public void delete(Integer id) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
+        T entity = (T) session.get(type, id);
         session.delete(entity);
         transaction.commit();
         session.close();

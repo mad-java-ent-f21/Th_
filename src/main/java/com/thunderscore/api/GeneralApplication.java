@@ -14,6 +14,7 @@ public class GeneralApplication extends Application {
         HashSet h = new HashSet<Class<?>>();
         h.add(CarSearch.class );
         h.add(CountryAPI.class);
+        h.add(ColorAPI.class);
         h.add(DriveTrainAPI.class);
         h.add(TransmissionAPI.class);
         h.add(BrandAPI.class);

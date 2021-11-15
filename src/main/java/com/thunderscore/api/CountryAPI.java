@@ -60,7 +60,7 @@ public class CountryAPI {
         GenericDao dao = DaoFactory.createDao(Country.class);
         try {
             dao.delete(id);
-            return Response.status(202).entity("success").build();
+            return Response.ok().entity("success").build();
         } catch (Exception e) {
             return Response.status(406).entity(e.getMessage()).build();
         }
