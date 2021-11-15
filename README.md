@@ -29,8 +29,7 @@ infrastructure, with full CRUD functionality. Users will be able to access vario
 
 ### Project Plan
 
-* [Todo](docs/TODO.md)
-* [Journal](docs/Journal.md)
+* [Journal](docs/TODO.md)
 
 ### Team documents
 
