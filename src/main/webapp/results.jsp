@@ -13,6 +13,7 @@
     <title>Title</title>
 </head>
 <body>
+<h1>${data}</h1>
 <h2>${title}</h2>
 <table class="table table-bordered">
     <tr><th>First Name</th><th>Last Name</th></tr>
