@@ -1,6 +1,7 @@
 package com.thunderscore.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -42,13 +43,10 @@ public class Model implements Serializable {
     @JoinColumn(name = "brand_id")
     private Brand brand;
 
-    @ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-            name = "model_color",
-            joinColumns = { @JoinColumn(name = "model_id") },
-            inverseJoinColumns = { @JoinColumn(name = "color_id") }
-    )
-    @ToString.Exclude
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "model_color", joinColumns = {
+            @JoinColumn(name = "model_id", referencedColumnName = "id") }, inverseJoinColumns = {
+            @JoinColumn(name = "color_id", referencedColumnName = "id") })
     private Set<Color> colors = new HashSet<>();
 
     @Override

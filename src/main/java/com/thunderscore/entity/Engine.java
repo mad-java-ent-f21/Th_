@@ -20,6 +20,9 @@ public class Engine implements Serializable {
     @Column(nullable = false, unique = true)
     private Integer id;
 
+    @Column(name = "type")
+    private String type;
+
     @Column(name = "displacement")
     private String displacement;
 
