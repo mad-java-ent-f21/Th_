@@ -14,13 +14,17 @@ import java.util.Objects;
 @Table(name = "trim")
 public class Trim {
 
-    @EmbeddedId
-    private TrimPK trimPK;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, unique = true)
+    private Integer id;
 
-    @MapsId("modelId")
     @ManyToOne
     @JoinColumn(name = "model_id")
     private Model model;
+
+    @Column(name = "name", nullable = false, length = 20)
+    private String name;
 
     @Column(name = "description", length = 128)
     private String description;
@@ -31,16 +35,28 @@ public class Trim {
     @Column(name = "forced_induction", length = 20)
     private String forcedInduction;
 
+    @ManyToOne
+    @JoinColumn(name="engine_id")
+    private Engine engine;
+
+    @ManyToOne
+    @JoinColumn(name="drivetrain_id")
+    private DriveTrain driveTrain;
+
+    @ManyToOne
+    @JoinColumn(name="transmission_id")
+    private Transmission transmission;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         Trim trim = (Trim) o;
-        return Objects.equals(trimPK, trim.trimPK);
+        return Objects.equals(id, trim.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(trimPK);
+        return Objects.hash(id);
     }
 }

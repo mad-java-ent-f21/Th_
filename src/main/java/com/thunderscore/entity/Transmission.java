@@ -1,6 +1,9 @@
 package com.thunderscore.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.Hibernate;
 import org.hibernate.annotations.Type;
 
@@ -13,7 +16,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Entity
-@Table(name = "transnission")
+@Table(name = "transmission")
 public class Transmission implements Serializable {
 
     @Id
@@ -24,7 +27,7 @@ public class Transmission implements Serializable {
     @Column(name = "name", nullable = false, length = 20)
     private String name;
 
-    @Column(name = "automatic", nullable = false)
+    @Column(name = "automatic", nullable = false, columnDefinition = "TINYINT")
     @Type(type = "org.hibernate.type.NumericBooleanType")
     private boolean automatic;
 
