@@ -14,7 +14,7 @@ public class GenericDAOTest {
         dao = new GenericDao(Brand.class);
     }
 
-    @Test
+    //@Test
     void getAllSuccess(){
         List<Brand> brands = dao.getAll();
         assertEquals(0, brands.size());
