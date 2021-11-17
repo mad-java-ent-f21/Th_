@@ -13,19 +13,22 @@ infrastructure, with full CRUD functionality. Users will be able to access vario
 
 | Name  | Technology    |
 |-----------|-----------|
-| Security/Authentication | Spring Security & JSON Web Token |
 | Database | MySQL 8 |
 | ORM Framework | Hibernate 5 |
 | Dependency Management | Maven 3 |
 | RESTful framework | Java Jersey 2 |
 | Logging | Log4J2 |
-| Hosting | AWS Elastic Beanstalk |
+| Hosting Backend | AWS Elastic Beanstalk |
+| Hosting Frontend | AWS S3 |
 | Unit Testing | JUnit 5 tests to achieve 80%+ code coverage |
 | IDE | IntelliJ IDEA, VS Code |
 | VCS | Git |
 
 ### Design
-// TODO
+* [DB Schema (drawio)](docs/Th_%20CarDB%20Schema%20(drawio).png)
+* [DB Schema](docs/Th_%20CarDB%20Schema.png)
+* [Example 1 (getAll page)](docs/screens/front-example-getall.png)
+* [Example 2 (create page)](docs/screens/front-example-create.png)
 
 ### Project Plan
 
