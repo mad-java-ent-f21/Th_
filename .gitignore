@@ -14,3 +14,4 @@
 /src/main/filters/*
 *.log
 /.settings
+.classpath

@@ -62,4 +62,15 @@ public class Trim {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    public Trim(Model model, String name, String description, Integer fuelConsumption, String forcedInduction, Engine engine, DriveTrain driveTrain, Transmission transmission) {
+        this.model = model;
+        this.name = name;
+        this.description = description;
+        this.fuelConsumption = fuelConsumption;
+        this.forcedInduction = forcedInduction;
+        this.engine = engine;
+        this.driveTrain = driveTrain;
+        this.transmission = transmission;
+    }
 }
