@@ -39,4 +39,15 @@ public class Brand implements Serializable {
     public int hashCode() {
         return 0;
     }
+
+    public Brand(String name, Country country) {
+        this.name = name;
+        this.country = country;
+    }
+
+    public Brand(Integer id, String name, Country country) {
+        this.id = id;
+        this.name = name;
+        this.country = country;
+    }
 }

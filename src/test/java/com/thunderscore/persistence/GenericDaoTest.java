@@ -2,6 +2,7 @@ package com.thunderscore.persistence;
 
 import com.thunderscore.GenericDAOTestDepricated;
 import com.thunderscore.entity.Brand;
+import com.thunderscore.entity.Country;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,7 +30,14 @@ class GenericDaoTest extends GenericDAOTestDepricated {
 
     @Test
     void getById() {
-
+        Brand brand = (Brand) dao.getById(1);
+        String brandString = brand.toString();
+        logger.debug(brandString);
+        assertNotNull(brand);
+        Country country = new Country(9, "United States");
+        Brand expected = new Brand(1, "Ford", country);
+        String expectedToString = expected.toString();
+        assertEquals(expectedToString, brandString);
     }
 
     @Test

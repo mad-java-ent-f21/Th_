@@ -38,4 +38,13 @@ public class Country implements Serializable {
     public int hashCode() {
         return 0;
     }
+
+    public Country(String name) {
+        this.name = name;
+    }
+
+    public Country(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
