@@ -11,6 +11,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * The type Transmission.
+ */
 @Getter
 @Setter
 @ToString

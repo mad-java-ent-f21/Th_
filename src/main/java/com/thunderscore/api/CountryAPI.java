@@ -9,9 +9,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * The type Country api.
+ */
 @Path("/country")
 public class CountryAPI {
 
+    /**
+     * Gets all.
+     *
+     * @return the all
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Country> getAll() {
@@ -19,6 +27,12 @@ public class CountryAPI {
         return (List<Country>) dao.getAll();
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return the by id
+     */
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -27,6 +41,12 @@ public class CountryAPI {
         return (Country) dao.getById(id);
     }
 
+    /**
+     * Create response.
+     *
+     * @param country the country
+     * @return the response
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -40,6 +60,12 @@ public class CountryAPI {
         }
     }
 
+    /**
+     * Update response.
+     *
+     * @param country the country
+     * @return the response
+     */
     @PATCH
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -53,6 +79,12 @@ public class CountryAPI {
         }
     }
 
+    /**
+     * Delete response.
+     *
+     * @param id the id
+     * @return the response
+     */
     @DELETE
     @Path("{id}")
     @Produces(MediaType.TEXT_PLAIN)

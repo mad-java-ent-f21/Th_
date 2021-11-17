@@ -9,9 +9,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * The type Engine api.
+ */
 @Path("/engine")
 public class EngineAPI {
 
+    /**
+     * Gets all.
+     *
+     * @return all
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Engine> getAll() {
@@ -19,6 +27,12 @@ public class EngineAPI {
         return (List<Engine>) dao.getAll();
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return by id
+     */
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -27,6 +41,12 @@ public class EngineAPI {
         return (Engine) dao.getById(id);
     }
 
+    /**
+     * Create response.
+     *
+     * @param engine the engine
+     * @return the response
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -40,6 +60,12 @@ public class EngineAPI {
         }
     }
 
+    /**
+     * Update response.
+     *
+     * @param engine the engine
+     * @return the response
+     */
     @PATCH
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -53,6 +79,12 @@ public class EngineAPI {
         }
     }
 
+    /**
+     * Delete response.
+     *
+     * @param id the id
+     * @return the response
+     */
     @DELETE
     @Path("{id}")
     @Produces(MediaType.TEXT_PLAIN)

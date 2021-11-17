@@ -9,9 +9,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * The type Transmission api.
+ */
 @Path("/transmission")
 public class TransmissionAPI {
 
+    /**
+     * Gets all.
+     *
+     * @return all
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Transmission> getAll() {
@@ -19,6 +27,12 @@ public class TransmissionAPI {
         return (List<Transmission>) dao.getAll();
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return the id
+     */
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -27,6 +41,12 @@ public class TransmissionAPI {
         return (Transmission) dao.getById(id);
     }
 
+    /**
+     * Create response.
+     *
+     * @param transmission the transmission
+     * @return the response
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -40,6 +60,12 @@ public class TransmissionAPI {
         }
     }
 
+    /**
+     * Update response.
+     *
+     * @param transmission the transmission
+     * @return the response
+     */
     @PATCH
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -53,6 +79,12 @@ public class TransmissionAPI {
         }
     }
 
+    /**
+     * Delete response.
+     *
+     * @param id the id
+     * @return the response
+     */
     @DELETE
     @Path("{id}")
     @Produces(MediaType.TEXT_PLAIN)

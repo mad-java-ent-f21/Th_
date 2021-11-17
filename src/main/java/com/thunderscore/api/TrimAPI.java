@@ -9,9 +9,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * The type Trim api.
+ */
 @Path("/trim")
 public class TrimAPI {
 
+    /**
+     * Gets all.
+     *
+     * @return the all
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Trim> getAll() {
@@ -19,6 +27,12 @@ public class TrimAPI {
         return (List<Trim>) dao.getAll();
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return the by id
+     */
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -27,6 +41,12 @@ public class TrimAPI {
         return (Trim) dao.getById(id);
     }
 
+    /**
+     * Create response.
+     *
+     * @param trim the trim
+     * @return the response
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -40,6 +60,12 @@ public class TrimAPI {
         }
     }
 
+    /**
+     * Update response.
+     *
+     * @param trim the trim
+     * @return the response
+     */
     @PATCH
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -53,6 +79,12 @@ public class TrimAPI {
         }
     }
 
+    /**
+     * Delete response.
+     *
+     * @param id the id
+     * @return the response
+     */
     @DELETE
     @Path("{id}")
     @Produces(MediaType.TEXT_PLAIN)

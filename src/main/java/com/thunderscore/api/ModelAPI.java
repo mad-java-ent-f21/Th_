@@ -9,9 +9,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * The type Model api.
+ */
 @Path("/model")
 public class ModelAPI {
 
+    /**
+     * Gets all.
+     *
+     * @return all
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Model> getAll() {
@@ -19,6 +27,12 @@ public class ModelAPI {
         return (List<Model>) dao.getAll();
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return by id
+     */
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -27,6 +41,12 @@ public class ModelAPI {
         return (Model) dao.getById(id);
     }
 
+    /**
+     * Create response.
+     *
+     * @param model the model
+     * @return the response
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -40,6 +60,12 @@ public class ModelAPI {
         }
     }
 
+    /**
+     * Update response.
+     *
+     * @param model the model
+     * @return the response
+     */
     @PATCH
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -53,6 +79,12 @@ public class ModelAPI {
         }
     }
 
+    /**
+     * Delete response.
+     *
+     * @param id the id
+     * @return the response
+     */
     @DELETE
     @Path("{id}")
     @Produces(MediaType.TEXT_PLAIN)

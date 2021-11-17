@@ -10,6 +10,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * The type Country.
+ */
 @Getter
 @Setter
 @ToString
@@ -39,10 +42,21 @@ public class Country implements Serializable {
         return 0;
     }
 
+    /**
+     * Instantiates a new Country.
+     *
+     * @param name the name
+     */
     public Country(String name) {
         this.name = name;
     }
 
+    /**
+     * Instantiates a new Country.
+     *
+     * @param id   the id
+     * @param name the name
+     */
     public Country(Integer id, String name) {
         this.id = id;
         this.name = name;

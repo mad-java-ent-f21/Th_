@@ -9,8 +9,16 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * The type Drive train api.
+ */
 @Path("/drive-train")
 public class DriveTrainAPI {
+    /**
+     * Gets all.
+     *
+     * @return all drivetrains
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<DriveTrain> getAll() {
@@ -18,6 +26,12 @@ public class DriveTrainAPI {
         return (List<DriveTrain>) dao.getAll();
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return drivetrain by id
+     */
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -26,6 +40,12 @@ public class DriveTrainAPI {
         return (DriveTrain) dao.getById(id);
     }
 
+    /**
+     * Create response.
+     *
+     * @param driveTrain the drive train
+     * @return the response
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -39,6 +59,12 @@ public class DriveTrainAPI {
         }
     }
 
+    /**
+     * Update response.
+     *
+     * @param driveTrain the drive train
+     * @return the response
+     */
     @PATCH
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
@@ -52,6 +78,12 @@ public class DriveTrainAPI {
         }
     }
 
+    /**
+     * Delete response.
+     *
+     * @param id the id
+     * @return the response
+     */
     @DELETE
     @Path("{id}")
     @Produces(MediaType.TEXT_PLAIN)

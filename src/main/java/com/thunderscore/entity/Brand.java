@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * The type Brand.
+ */
 @Getter
 @Setter
 @ToString
@@ -40,11 +43,24 @@ public class Brand implements Serializable {
         return 0;
     }
 
+    /**
+     * Instantiates a new Brand.
+     *
+     * @param name    the name
+     * @param country the country
+     */
     public Brand(String name, Country country) {
         this.name = name;
         this.country = country;
     }
 
+    /**
+     * Instantiates a new Brand.
+     *
+     * @param id      the id
+     * @param name    the name
+     * @param country the country
+     */
     public Brand(Integer id, String name, Country country) {
         this.id = id;
         this.name = name;

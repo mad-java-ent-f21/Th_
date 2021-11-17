@@ -14,6 +14,9 @@ import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Displays all brands on a webpage
+ */
 @WebServlet(
         urlPatterns = {"/displayAll"}
 )

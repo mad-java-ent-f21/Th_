@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * The type Engine.
+ */
 @Getter
 @Setter
 @ToString
