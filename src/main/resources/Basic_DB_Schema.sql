@@ -39,15 +39,15 @@ create table if not exists brand
 alter table brand
     add primary key (id);
 
-create table if not exists drivetrain
+create table if not exists drive_train
 (
     id int auto_increment,
     type varchar(3) not null,
-    constraint drivetrain_id_uindex
+    constraint drive_train_id_uindex
     unique (id)
     );
 
-alter table drivetrain
+alter table drive_train
     add primary key (id);
 
 create table if not exists engine
@@ -112,17 +112,18 @@ alter table transmission
 
 create table if not exists trim
 (
-    model_id int not null,
+    id int not null,
     name varchar(20) not null,
     description varchar(128) null,
+    model_id int not null,
     engine_id int not null,
-    drivetrain_id int not null,
+    drive_train_id int not null,
     transmission_id int not null comment 'using MPG',
     fuel_consumption int null,
     forced_induction varchar(20) null comment 'Supercharged or turbocharged',
-    primary key (model_id, name),
-    constraint trim_drivetrain_id_fk
-    foreign key (drivetrain_id) references drivetrain (id),
+    primary key (id),
+    constraint trim_drive_train_id_fk
+    foreign key (drive_train_id) references drive_train (id),
     constraint trim_engine_id_fk
     foreign key (engine_id) references engine (id),
     constraint trim_model_id_fk

@@ -38,4 +38,9 @@ public class DriveTrain implements Serializable {
     public int hashCode() {
         return 0;
     }
+
+    public DriveTrain(int id, String type) {
+        this.id = id;
+        this.type = type;
+    }
 }

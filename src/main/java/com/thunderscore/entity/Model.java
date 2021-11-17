@@ -64,4 +64,13 @@ public class Model implements Serializable {
     public int hashCode() {
         return 0;
     }
+
+    public Model(String name, Integer year, Integer seats, String description, Brand brand, Set<Color> colors) {
+        this.name = name;
+        this.year = year;
+        this.seats = seats;
+        this.description = description;
+        this.brand = brand;
+        this.colors = colors;
+    }
 }
